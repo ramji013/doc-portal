@@ -1,0 +1,22 @@
+faiss_db:
+ collection_name: "doc-portal" 
+
+embedding_model:
+  provider: "google"
+  model: "models/text-embedding-004"
+
+retriever:
+  top_k: 10
+
+llm:
+  groq: 
+    provider: "groq"
+    model: "deepseek-r1-distill-llama-70b"
+    temperature: 0.1
+    max_output_tokens: 2048
+  
+  google:
+    provider: "google"
+    model: "gemini-2.0-flash"
+    temperature: 0.1
+    max_output_tokens: 2048
